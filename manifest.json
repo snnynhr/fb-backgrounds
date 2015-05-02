@@ -13,7 +13,8 @@
   {
     "matches": ["*://www.facebook.com/*", "*://www.facebook.com/"],
     "js": ["util/jquery.min.js", "js/fbedit.js"],
-    "run_at": "document_end"
+    "run_at": "document_start"
   }
-  ]
+  ],
+  "web_accessible_resources": ["backgrounds/*"]
 }

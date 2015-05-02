@@ -1,25 +1,17 @@
-var arr = [
-'http://www.moritzkrauss.de/images/header-2015.jpg',
-'http://passionact.com/wp-content/uploads/2014/09/dawn-190053.jpg',
-'https://elpensaderodesegundo.files.wordpress.com/2015/02/cropped-el-teide-michael-bolognesi.jpg',
-'http://www.timteller.pl/wp-content/uploads/2015/02/jungle-601542_1920.jpg',
-'http://isrageo.com/wp_site/wp-content/uploads/2015/03/11086458_1106706329345151_1487392015_o.jpg',
-'http://s3.amazonaws.com/simplifit_blog/media/2015/04/simplifit-news.jpg'];
-
-console.log('Initiated DOM handler');
-
 $(document).ready(function() {
-    var v = Math.floor(Math.random() * 6.0);
-    console.log('Hello');
+    var v = Math.floor(Math.random() * 45.0) + 1;
     var inp = document.getElementsByClassName('_5vb_');
     var bck = document.getElementById('contentCol');
-    bck.style.setProperty('background-color', '#4264CB', null);
+    bck.style.setProperty('background-color', 'rgba(255, 255, 255, .0)', null);
     for (i = 0; i < inp.length; i++)
-        inp[i].style.setProperty('background-image', 'url(' + arr[v] + ')', null);
-    console.log(inp.style);
-    //$('#contentCol').css('background-color', '#1F2C51');
+    {
+        console.log(inp[i]);
+        inp[i].style.setProperty('background-image', 'url(chrome-extension://aocnnoofijiapldjoijbgicmlfiklahl/backgrounds/' + v + '.jpg' + ')',
+                                 null);
+        inp[i].style.setProperty('background-position', 'center', null);
+        inp[i].style.setProperty('background-repeat', 'repeat', null);
+        //inp[i].style.setProperty('background-size', 'cover', null);
+    }
+    var leftcol = document.getElementById("leftCol");
+    leftcol.style.setProperty('background', '#e9eaed')
 });
-// document.addEventListener('DOMContentLoaded', function() {
-//     console.log('About to change');
-//     $( '#contentCol' ).css( 'background-color', '0x1F2C51' );
-// });
