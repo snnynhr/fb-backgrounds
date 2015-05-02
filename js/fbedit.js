@@ -6,12 +6,14 @@ $(document).ready(function() {
     for (i = 0; i < inp.length; i++)
     {
         console.log(inp[i]);
-        inp[i].style.setProperty('background-image', 'url(chrome-extension://aocnnoofijiapldjoijbgicmlfiklahl/backgrounds/' + v + '.jpg' + ')',
-                                 null);
+        var id = chrome.runtime.id;
+        inp[i].style.setProperty('background-image',
+                                 'url(chrome-extension://' + id +
+                                 '/backgrounds/' + v +
+                                  '.jpg' + ')', null);
         inp[i].style.setProperty('background-position', 'center', null);
         inp[i].style.setProperty('background-repeat', 'repeat', null);
-        //inp[i].style.setProperty('background-size', 'cover', null);
     }
-    var leftcol = document.getElementById("leftCol");
-    leftcol.style.setProperty('background', '#e9eaed')
+    var leftcol = document.getElementById('leftCol');
+    leftcol.style.setProperty('background', '#e9eaed');
 });
